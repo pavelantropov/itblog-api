@@ -1,6 +1,9 @@
 using System;
 using System.Linq;
+using System.Threading;
+using Antropov.ITBlog.UseCases.Abstractions;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
@@ -54,6 +57,15 @@ app.MapGet("/weatherforecast", () =>
 	return forecast;
 })
 .WithName("GetWeatherForecast");
+
+app.MapGet(
+	"api/blogPosts",
+	async (IGetListOfBlogPostsUseCase useCase, CancellationToken cancellationToken) =>
+	await useCase.Invoke(cancellationToken));
+app.MapGet(
+	"api/blogPosts/{blogPostId}",
+	async ([FromRoute] string blogPostId, IGetBlogPostUseCase useCase, CancellationToken cancellationToken) =>
+	await useCase.Invoke(blogPostId, cancellationToken));
 
 app.Run();
 
