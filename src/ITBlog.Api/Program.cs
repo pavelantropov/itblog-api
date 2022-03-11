@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Threading;
+using Antropov.ITBlog.DataAccess.CosmosDB;
 using Antropov.ITBlog.UseCases.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,7 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddCosmosDb();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
