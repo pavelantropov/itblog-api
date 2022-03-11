@@ -5,6 +5,16 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITBlog.Api", "src\ITBlog.Api\ITBlog.Api.csproj", "{BB34E4B0-F2B6-40A7-A702-34176C55039F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITBlog.UseCases", "src\ITBlog.UseCases\ITBlog.UseCases.csproj", "{8570AEE1-2B6B-44F2-A5DB-6BC5F2A3E8F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITBlog.Entities", "src\ITBlog.Entities\ITBlog.Entities.csproj", "{FA155343-7A40-464F-8440-3F69822C9BDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITBlog.Infrastructure", "src\ITBlog.Infrastructure\ITBlog.Infrastructure.csproj", "{E5D282DA-4E8E-422E-90B2-F5B545659577}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITBlog.Utils", "src\ITBlog.Utils\ITBlog.Utils.csproj", "{89C87A57-5113-48A3-B22E-DD247CB441DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITBlog.DataAccess.CosmosDB", "src\ITBlog.DataAccess.CosmosDB\ITBlog.DataAccess.CosmosDB.csproj", "{8FACCEE2-5E2F-4C69-A4B9-3E27159A8C67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{BB34E4B0-F2B6-40A7-A702-34176C55039F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB34E4B0-F2B6-40A7-A702-34176C55039F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB34E4B0-F2B6-40A7-A702-34176C55039F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8570AEE1-2B6B-44F2-A5DB-6BC5F2A3E8F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8570AEE1-2B6B-44F2-A5DB-6BC5F2A3E8F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8570AEE1-2B6B-44F2-A5DB-6BC5F2A3E8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8570AEE1-2B6B-44F2-A5DB-6BC5F2A3E8F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA155343-7A40-464F-8440-3F69822C9BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA155343-7A40-464F-8440-3F69822C9BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA155343-7A40-464F-8440-3F69822C9BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA155343-7A40-464F-8440-3F69822C9BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5D282DA-4E8E-422E-90B2-F5B545659577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5D282DA-4E8E-422E-90B2-F5B545659577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5D282DA-4E8E-422E-90B2-F5B545659577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5D282DA-4E8E-422E-90B2-F5B545659577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89C87A57-5113-48A3-B22E-DD247CB441DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C87A57-5113-48A3-B22E-DD247CB441DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89C87A57-5113-48A3-B22E-DD247CB441DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C87A57-5113-48A3-B22E-DD247CB441DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FACCEE2-5E2F-4C69-A4B9-3E27159A8C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FACCEE2-5E2F-4C69-A4B9-3E27159A8C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FACCEE2-5E2F-4C69-A4B9-3E27159A8C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FACCEE2-5E2F-4C69-A4B9-3E27159A8C67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

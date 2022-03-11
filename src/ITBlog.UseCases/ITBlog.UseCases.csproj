@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<WarningsAsErrors>Nullable</WarningsAsErrors>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Antropov.ITBlog.UseCases</RootNamespace>
+		<AssemblyName>Antropov.ITBlog.UseCases</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="Abstractions\" />
+		<Folder Include="Dto\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ITBlog.DataAccess.CosmosDB\ITBlog.DataAccess.CosmosDB.csproj" />
+		<ProjectReference Include="..\ITBlog.Entities\ITBlog.Entities.csproj" />
+	</ItemGroup>
+
+</Project>

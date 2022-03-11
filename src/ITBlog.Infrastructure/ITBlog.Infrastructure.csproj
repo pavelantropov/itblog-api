@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<WarningsAsErrors>Nullable</WarningsAsErrors>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Antropov.ITBlog.Infrastructure</RootNamespace>
+		<AssemblyName>Antropov.ITBlog.Infrastructure</AssemblyName>
+	</PropertyGroup>
+
+</Project>

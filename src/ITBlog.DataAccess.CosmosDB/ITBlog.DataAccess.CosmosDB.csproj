@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<WarningsAsErrors>Nullable</WarningsAsErrors>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Antropov.ITBlog.DataAccess.CosmosDB</RootNamespace>
+		<AssemblyName>Antropov.ITBlog.DataAccess.CosmosDB</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="Abstractions\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Azure.Cosmos" Version="3.25.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ITBlog.Entities\ITBlog.Entities.csproj" />
+	</ItemGroup>
+
+</Project>
