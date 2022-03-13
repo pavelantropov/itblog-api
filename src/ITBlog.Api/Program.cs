@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Threading;
 using Antropov.ITBlog.DataAccess.CosmosDB;
+using Antropov.ITBlog.UseCases;
 using Antropov.ITBlog.UseCases.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddCosmosDb();
+builder.Services.AddScoped<IGetListOfBlogPostsUseCase, GetListOfBlogPostsUseCase>();
+builder.Services.AddScoped<IGetBlogPostUseCase, GetBlogPostUseCase>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -62,8 +66,8 @@ app.MapGet("/weatherforecast", () =>
 
 app.MapGet(
 	"api/blogPosts",
-	async (IGetListOfBlogPostsUseCase useCase, CancellationToken cancellationToken) =>
-	await useCase.Invoke(cancellationToken));
+	async ([FromQuery] string title, IGetListOfBlogPostsUseCase useCase, CancellationToken cancellationToken) =>
+	await useCase.Invoke(title, cancellationToken));
 app.MapGet(
 	"api/blogPosts/{blogPostId}",
 	async ([FromRoute] string blogPostId, IGetBlogPostUseCase useCase, CancellationToken cancellationToken) =>
