@@ -66,7 +66,7 @@ app.MapGet("/weatherforecast", () =>
 
 app.MapGet(
 	"api/blogPosts",
-	async ([FromQuery] string title, IGetListOfBlogPostsUseCase useCase, CancellationToken cancellationToken) =>
+	async ([FromQuery] string? title, IGetListOfBlogPostsUseCase useCase, CancellationToken cancellationToken) =>
 	await useCase.Invoke(title, cancellationToken));
 app.MapGet(
 	"api/blogPosts/{blogPostId}",

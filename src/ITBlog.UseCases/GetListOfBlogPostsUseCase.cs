@@ -28,12 +28,12 @@ public class GetListOfBlogPostsUseCase : IGetListOfBlogPostsUseCase
 	#endregion
 
 	public async Task<BlogPostsDto> Invoke(
-		string title,
+		string? title,
 		CancellationToken cancellationToken)
 	{
 		var blogPosts = await _blogPostDao.GetBlogPosts(
-			q =>  
-				q.Where(bp => bp.Title.Contains(title, StringComparison.InvariantCultureIgnoreCase)),
+				q => title == null 
+					? q : q.Where(bp => bp.Title.Contains(title, StringComparison.InvariantCultureIgnoreCase)),
 			cancellationToken);
 
 		var totalCount = blogPosts.Count;
