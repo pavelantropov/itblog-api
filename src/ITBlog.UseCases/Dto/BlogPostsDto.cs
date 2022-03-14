@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Antropov.ITBlog.Entities;
+﻿using Antropov.ITBlog.Entities;
 
 namespace Antropov.ITBlog.UseCases.Dto;
 
