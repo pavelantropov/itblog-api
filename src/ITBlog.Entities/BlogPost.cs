@@ -9,7 +9,7 @@ public class BlogPost
 	public string Body { get; set; } = null!;
 	public DateTime? CreationDate { get; set; }
 	public DateTime? LastUpdateDate { get; set; }
-	public string[] Labels { get; set; } = null!;
+	public string[] Tags { get; set; } = null!;
 	public string Author { get; set; } = null!;
 	public bool IsDeleted { get; set; }
 }
