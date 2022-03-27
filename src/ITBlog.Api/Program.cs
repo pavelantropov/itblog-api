@@ -69,9 +69,9 @@ app.MapGet(
 	async ([FromQuery] string? title, IGetListOfBlogPostsUseCase useCase, CancellationToken cancellationToken) =>
 	await useCase.Invoke(title, cancellationToken));
 app.MapGet(
-	"api/blogPosts/{blogPostId}",
-	async ([FromRoute] string blogPostId, IGetBlogPostUseCase useCase, CancellationToken cancellationToken) =>
-	await useCase.Invoke(blogPostId, cancellationToken));
+	"api/blogPosts/{id}",
+	async ([FromRoute] string id, IGetBlogPostUseCase useCase, CancellationToken cancellationToken) =>
+	await useCase.Invoke(id, cancellationToken));
 
 app.Run();
 

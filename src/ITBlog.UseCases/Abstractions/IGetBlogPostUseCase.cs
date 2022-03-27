@@ -7,7 +7,7 @@ namespace Antropov.ITBlog.UseCases.Abstractions;
 public interface IGetBlogPostUseCase
 {
 	Task<BlogPost?> Invoke(
-		string blogPostId,
+		string id,
 		CancellationToken cancellationToken
 	);
 }

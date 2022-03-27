@@ -23,6 +23,6 @@ public class GetBlogPostUseCase : IGetBlogPostUseCase
 
 	#endregion
 
-	public async Task<BlogPost?> Invoke(string blogPostId, CancellationToken cancellationToken) => 
-		await _blogPostDao.GetBlogPost(blogPostId, cancellationToken);
+	public async Task<BlogPost?> Invoke(string id, CancellationToken cancellationToken) => 
+		await _blogPostDao.GetBlogPost(id, cancellationToken);
 }

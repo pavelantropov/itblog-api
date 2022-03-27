@@ -44,9 +44,9 @@ public class BlogPostDataAccessObject : IBlogPostDataAccessObject
 		return blogPosts;
 	}
 
-	public async Task<BlogPost?> GetBlogPost(string blogPostId, CancellationToken cancellation = default)
+	public async Task<BlogPost?> GetBlogPost(string id, CancellationToken cancellation = default)
 	{
 		var container = _cosmosClient.GetContainer(_options.DatabaseName, _options.BlogPostsContainerName);
-		return await container.ReadItemAsync<BlogPost?>(blogPostId, new PartitionKey(blogPostId), cancellationToken: cancellation);
+		return await container.ReadItemAsync<BlogPost?>(id, new PartitionKey(id), cancellationToken: cancellation);
 	}
 }

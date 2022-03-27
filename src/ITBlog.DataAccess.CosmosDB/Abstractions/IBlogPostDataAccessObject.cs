@@ -13,5 +13,5 @@ public interface IBlogPostDataAccessObject
 		Func<IQueryable<BlogPost>, IQueryable<BlogPost>> applyQuery,
 		CancellationToken cancellation = default);
 
-	Task<BlogPost?> GetBlogPost(string blogPostId, CancellationToken cancellation = default);
+	Task<BlogPost?> GetBlogPost(string id, CancellationToken cancellation = default);
 }
